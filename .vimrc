@@ -30,8 +30,11 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'preservim/nerdcommenter'
 Plugin 'Raimondi/delimitMate'
 Plugin 'davidhalter/jedi-vim'
-" Plugins added by me ends here ---
-
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'rakr/vim-one'
+Plugin 'iamcco/markdown-preview.nvim'
+" Plugin 'morhetz/gruvbox'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -69,3 +72,14 @@ syntax on
 let g:rainbow_active = 1
 
 let g:jedi#popup_on_dot = 0
+
+" Vim-airline Colorscheme Theme setup below: ---
+set t_Co=256
+set background=dark
+colorscheme one " change this line to set the current theme
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+" Vim-airline setup ends here ---
+
+" Markdown Preview installation requirement
+call mkdp#util#install()
